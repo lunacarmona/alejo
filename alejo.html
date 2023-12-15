@@ -1,0 +1,78 @@
+<html>
+<head>
+    <style>
+        body {
+            background-color: pink;
+            font-family: Arial, sans-serif;
+        }
+
+        h1 {
+            text-align: center;
+            color: white;
+        }
+
+        button {
+            display: block;
+            margin: 0 auto;
+            padding: 20px;
+            font-size: 20px;
+            border: none;
+            border-radius: 10px;
+            background-color: purple;
+            color: white;
+            cursor: pointer;
+        }
+
+        p {
+            display: none;
+            text-align: center;
+            font-size: 30px;
+            color: white;
+        }
+
+        #imagen {
+            display: none;
+        }
+    </style>
+</head>
+<body>
+    <h1>¡Hola, Alejito!</h1>
+    <button id="boton1">Haz clic aquí </button>
+    <p id="mensaje">Y te hice esta página interactiva xq te amo <3</p>
+    <button id="boton2">Ver el dibujito que hizo lunita</button>
+    <img id="imagen" src="alejitoo.png">
+    <script>
+      
+        var boton1 = document.getElementById("boton1");
+        var boton2 = document.getElementById("boton2");
+        var mensaje = document.getElementById("mensaje");
+        var imagen = document.getElementById("imagen");
+
+        
+        function mostrarMensaje() {
+            
+            mensaje.style.display = "block";
+            
+            boton1.innerHTML = "Te amo";
+        }
+
+       
+        function mostrarOcultarImagen() {
+           
+            if (imagen.style.display == "none") {
+                imagen.style.display = "block";
+                boton2.innerHTML = "Ocultar dibujito";
+            } else {
+                
+                imagen.style.display = "none";
+                boton2.innerHTML = "Ver el dibujito que hizo lunita";
+            }
+        }
+
+        
+        boton1.addEventListener("click", mostrarMensaje);
+        boton2.addEventListener("click", mostrarOcultarImagen);
+    </script>
+</body>
+</html>
+
